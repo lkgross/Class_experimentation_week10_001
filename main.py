@@ -115,10 +115,9 @@ def main():
     print()
     cheer2('Sox')
     print()
-    # cheer3('Pats', 5)
 
 
-main()
+# main()
 
 
 # We've seen functions with zero parameters
@@ -153,10 +152,60 @@ def cheer3(team, times):
         print(f'Go, {team}!')
 
 
-cheer3('Bruins', 3)
+# cheer3('Bruins', 3)
+
+# print()
+
+# cheer3('Pats', 5)
+def main():
+    for i in range(3):
+        print('Go Bruins!')
+    print()
+    for i in range(3):
+        print('Go Celtics!')
+    print()
+    for i in range(3):
+        print('Go Sox!')
+
+
+# main()
+
+def print_models(unprinted, printed):
+    '''3d print a set of models.'''
+    while unprinted:
+        current_model = unprinted.pop()
+        print(f"Printing {current_model}")
+        printed.append(current_model)
+    print(f'We still need to print: {unprinted}')
+    print(f'We printed: {printed}')
+
+
+print_models(['phone case', 'pendant', 'ring'], [])
+
+list1 = ['phone case', 'pendant', 'ring']
+list2 = []
 
 print()
 
-cheer3('Pats', 5)
+# list1 has elements, so if list1 means if True.
+if list1:
+    print('Yes!')
+
+# list2 has no elements, so if list2 means if False.
+if list2:
+    print('Yes')
 
 
+def print_models2(unprinted, printed):
+    '''3d print a set of models.'''
+    while unprinted:
+        current_model = unprinted.pop()
+        print(f"Printing {current_model}")
+        printed.append(current_model)
+    return printed
+
+
+print()
+
+print(f"The list of printed models is:"
+      f" {print_models2(['phone case', 'pendant', 'ring'], [])}")
